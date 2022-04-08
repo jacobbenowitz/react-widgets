@@ -1,0 +1,23 @@
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3em;
+}
+
+p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1em;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2em;
+}
+
+.clock-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.time {
+    place-items: end;
+}
