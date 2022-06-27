@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import AutoCompelte from "./autocomplete";
 import Clock from "./clock";
 import Tabs from "./tabs";
-// import Weather from "./weather";
+import Weather from "./weather";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return (
             <>
                 <div className="app grid-12-col">
+                    <Tabs tabs={tabs} />
                     <AutoCompelte listContent={listContent} />
                     <Clock />
-                    <Tabs tabs={tabs} />
-                    {/* <Weather /> */}
+                    <Weather />
                     <footer className="span-8">
                         <div className="spacer ft-divider" data-height="3rem" />
                         <div className="ft-content flex-col gap-1">
