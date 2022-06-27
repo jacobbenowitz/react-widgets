@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "permissions":      ["geolocation"],
+    "content_scripts":  [ {
+        "js":               [   "index.js" ],
+        "matches":          [   "<all_urls>" ]
+    } ],
+    "background": {
+        "scripts":      ["weather.js"],
+        "persistent":   false
+    },
+    "name":             "_Read browser location",
+    "description":      "See SO Q 18307051. Scarf location without spamming warnings",
+    "version":          "1"
+}
