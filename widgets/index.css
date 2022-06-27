@@ -1,2 +1,5 @@
 @import "./stylesheets/reset.css";
 @import "./stylesheets/base.css";
+@import "./stylesheets/clock.css";
+@import "./stylesheets/tabs.css";
+@import "./stylesheets/weather.css";

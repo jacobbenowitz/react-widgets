@@ -1,0 +1,37 @@
+.main-temp {
+  font-size: 2rem;
+}
+
+.weather {
+  color: #E5E7EA;
+  font-family: 'Mulish', sans-serif;
+}
+
+.weather .container {
+  grid-template-rows: auto 1fr;
+}
+
+.top-info {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+}
+
+.weather-container {
+  padding-top: 2rem;
+}
+
+.big-temp {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.sm-title {
+  font-size: .8rem;
+  opacity: 0.8;
+  font-style: italic;
+  color: #b1942c;
+}
+
+.labels {
+  opacity: 0.8;
+}

@@ -1,0 +1,19 @@
+.time {
+    place-items: end;
+}
+
+.time-digits {
+    color: #E5E7EA;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.light {
+    font-weight: 500;
+}
+
+.clock .container {
+    grid-template-columns: auto 1fr;
+    column-gap: 1.5rem;
+}

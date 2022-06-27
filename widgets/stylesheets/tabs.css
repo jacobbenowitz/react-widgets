@@ -1,0 +1,45 @@
+.tab-header li {
+    font-size: 1rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
+}
+
+li.active {
+    font-weight: 900;
+    background-color: #431f96;
+}
+
+.tabs-main {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    background-color: rgba(18, 18, 18, 0.75);
+    border-radius: 8px;
+    
+}
+
+.tab-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    
+}
+
+.tab-header li {
+    flex-grow: 1;
+    padding: .4em 1em .4em 1em;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.tab-header li:hover {
+    background-color: rgba(41, 18, 94, 0.813);
+    cursor: pointer;
+}
+
+.tab-content,  .tab-content > article {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
