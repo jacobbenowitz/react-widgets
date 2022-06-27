@@ -8,15 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const root = document.getElementById("root");
     const tabs = [
-        { title: "#1 tab", content: "tab number one!" },
-        { title: "#2 tab", content: "tab number two!" },
-        { title: "#3 tab", content: "tab number three!" }
+        { title: "Weather", content: <Weather type='tab'/> },
+        { title: "Clock", content: <Clock type='tab'/> },
     ]
     const App = () => (
         <div className="app grid-12-col">
             <Tabs tabs={tabs} />
-            <Clock />
             <Weather />
+            <Clock />
         </div>
     );
 

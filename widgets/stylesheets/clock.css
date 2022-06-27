@@ -1,19 +1,55 @@
 .time {
-    place-items: end;
-}
-
-.time-digits {
     color: #E5E7EA;
     font-family: 'Mulish', sans-serif;
-    font-weight: 900;
     font-size: 1.4rem;
 }
 
-.light {
+.digits {
+    font-size: 4rem;
+    align-items: baseline;
+}
+
+.digits-sm {
+    font-size: 2rem;
+    font-weight: 600;
+    opacity: 80%;
+}
+
+.time-digits {
     font-weight: 500;
 }
 
-.clock .container {
-    grid-template-columns: auto 1fr;
-    column-gap: 1.5rem;
+.light {
+    font-weight: 200;
+}
+
+.seconds {
+    opacity: 30%;
+}
+
+.seconds-switch {
+    animation: secondsSwitch 150ms ease-in-out;
+}
+
+@keyframes secondsSwitch {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    1000% {
+        opacity: 100%;
+    }
+}
+
+[data-width="digits"] {
+    display: inline-block;
+    width: 40px;
+}
+
+.day {
+    font-weight: 700;
+    color: #58eff7;
+    opacity: 65%;
 }

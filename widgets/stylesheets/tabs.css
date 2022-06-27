@@ -11,10 +11,9 @@ li.active {
 
 .tabs-main {
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: auto 1fr;
     background-color: rgba(18, 18, 18, 0.75);
     border-radius: 8px;
-    
 }
 
 .tab-header {
@@ -42,4 +41,7 @@ li.active {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.tab-content {
 }

@@ -26,7 +26,7 @@ export default class Tabs extends React.Component {
     return (
       <div className="tabs span-6-center">
         <div className="tabs-container">
-          <h1>Tabs</h1>
+          <h1 className="title">Tabs</h1>
           <div className="tabs-main">
             <Header
               selectedTab={this.state.selectedTab}
