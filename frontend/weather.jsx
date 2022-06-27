@@ -41,6 +41,7 @@ export default class Weather extends React.Component {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`)
       .then(response => response.json())
       .then(data => this.handleData(data))
+      .catch(error => console.log(error))
   }
 
   handleData(data) {
