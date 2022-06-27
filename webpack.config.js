@@ -18,7 +18,7 @@ module.exports = {
                     query: {
                         presets: [
                             '@babel/env',
-                            '@babel/preset-react'
+                            '@babel/react',
                         ]
                     }
                 },

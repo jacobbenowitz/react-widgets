@@ -34,25 +34,40 @@ document.addEventListener("DOMContentLoaded", () => {
             { name: "Xiaomi", revenue: "$47.7 B" }
         ]
 
+
         const tabs = [
             {
-                title: "Tab 1", content: "Tab 1"
+                title: "Weather", content: <Weather type='tab' />
             },
             {
-                title: "Tab 2", content: "Tab 2"
+                title: "Clock", content: <Clock type='tab' />
             },
             {
-                title: "Tab 3",
-                content: "Tab 3"
+                title: "Autocomplete",
+                content: <AutoCompelte
+                    listContent={listContent}
+                    type='tab' />
             },
         ]
+        // const tabs = [
+        //     {
+        //         title: "Tab 1", content: "Tab 1"
+        //     },
+        //     {
+        //         title: "Tab 2", content: "Tab 2"
+        //     },
+        //     {
+        //         title: "Tab 3",
+        //         content: "Tab 3"
+        //     },
+        // ]
 
         return (
             <>
                 <div className="app grid-12-col">
-                    <Tabs tabs={tabs} />
                     <AutoCompelte listContent={listContent} />
                     <Clock />
+                    <Tabs tabs={tabs} />
                     {/* <Weather /> */}
                     <footer className="span-8">
                         <div className="spacer ft-divider" data-height="3rem" />
@@ -90,18 +105,3 @@ document.addEventListener("DOMContentLoaded", () => {
     ReactDOM.render(<App />, root);
 
 });
-
-// const tabs = [
-//     {
-//         title: "Weather", content: <Weather type='tab' />
-//     },
-//     {
-//         title: "Clock", content: <Clock type='tab' />
-//     },
-//     {
-//         title: "Autocomplete",
-//         content: <AutoCompelte
-//             listContent={listContent}
-//             type='tab' />
-//     },
-// ]

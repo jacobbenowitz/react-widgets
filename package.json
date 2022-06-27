@@ -9,9 +9,6 @@
   "browserslist": [
     "defaults"
   ],
-  "browser": {
-    "fs": false
-  },
   "scripts": {
     "watch": "webpack --watch --mode=development",
     "build": "webpack --mode=production"
