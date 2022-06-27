@@ -5,34 +5,6 @@ import { getDirection } from "./util/direction.js";
 
 const API_KEY = "3f39afb556eab7158c93d32828c6ecc4";
 
-// response object example
-// { coord: {… }, 
-//   weather: Array(1), base: 'stations', main: {… }, visibility: 10000, … }
-// base: "stations"
-// clouds: { all: 40 }
-// cod: 200
-// coord: { lon: -73.9605, lat: 40.6501 }
-// dt: 1656303225
-// id: 5110302
-// main: { 
-//      temp: 73.87, 
-//      feels_like: 74.1, 
-//      temp_min: 70.45, 
-//      temp_max: 77.88, 
-//      pressure: 1016, … }
-// name: "Brooklyn"
-// sys: { type: 2, id: 2037026, country: 'US', sunrise: 1656322006, sunset: 1656376250 }
-// timezone: -14400
-// visibility: 10000
-// weather: [{
-//    description: "scattered clouds"
-//    icon: "03n"
-//    id: 802
-//    main: "Clouds"
-//  }]
-// wind: { speed: 18.41, deg: 190, gust: 26.46 }
-// [[Prototype]]: Object
-
 const IDLE = "IDLE";
 const BUSY = "BUSY";
 const DONE = "DONE";
@@ -183,13 +155,13 @@ export default class Weather extends React.Component {
       )
     } else if (status === BUSY) {
       weatherData = (
-        <span className="center">
+        <span className="center pad-2">
           Communicating with nearby satilites, one moment please 🛰
         </span>
       )
     } else if (status === IDLE) {
       weatherData = (
-        <span className="center">
+        <span className="center pad-2">
           Please enable weather services to get your local weather report 🙏
         </span>
       )

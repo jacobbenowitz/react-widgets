@@ -53,3 +53,21 @@
     color: #58eff7;
     opacity: 65%;
 }
+
+.date-box {
+    display: flex;
+    align-items: center;
+    place-content: center;
+    background-color: #07777d;
+    border-radius: 6px;
+    flex-direction: row;
+    padding: 0 6px;
+}
+
+.date {
+    font-size: 1rem;
+}
+
+.ampm {
+    justify-self: flex-end;
+}

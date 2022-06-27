@@ -42,9 +42,40 @@ h4 {
     font-size: 1.4rem;
 }
 
+h5 {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    opacity: 80%;
+}
+
 strong {
     font-family: 'Mulish', sans-serif;
     font-weight: 800;
+}
+
+.icon-wrapper {
+    display: flex;
+    place-items: center;
+    align-items: center;
+}
+
+.title {
+    margin-left: 1rem;
+}
+
+.label {
+    /* color: #e5e7ea; */
+    color: #58eff7;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+}
+
+input[type='text'] {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    color: #121212;
+    width: 100%;
 }
 
 .grid-12-col {
@@ -52,9 +83,6 @@ strong {
     grid-template-columns: repeat(12, 1fr);
 }
 
-.title {
-    margin-left: 1rem;
-}
 
 .span-6-center {
     grid-column: 4 / span 6;
@@ -199,6 +227,9 @@ strong {
 .w-100 {
     width: 100%;
 }
+.h-100 {
+    height: 100%;
+}
 
 .grid-col-1 {
     grid-column: 1 / span 1;
@@ -230,4 +261,12 @@ strong {
 }
 .spacer[data-width="15"] {
     width: 15px;
+}
+
+.baseline {
+    align-items: baseline;
+}
+
+.pad-2 {
+    padding: 2rem 1rem;
 }

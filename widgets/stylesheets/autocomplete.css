@@ -1,0 +1,70 @@
+.autocomplete {
+  font-family: 'Mulish', sans-serif;
+  position: relative;
+  color: #d8dbe0;
+}
+
+.search-box {
+  background-color: #e5e7eaaa;
+  border-radius: 4px;
+  padding: 4px 6px;
+  margin-top: 0.4rem;
+  align-items: center;
+}
+
+.input {
+  position: relative;
+}
+
+.list-options {
+  max-height: 200px;
+  overflow: auto;
+  position: absolute;
+  background-color: rgba(18, 18, 18, 0.75);
+  border-radius: 8px;
+  width: 100%;
+  top: 4rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 24px rgba(18, 18, 18, 0.75);
+  z-index: 100;
+}
+
+.company-name {
+  font-weight: 800;
+  color: #d8dbe0;
+}
+
+.company-revenue {
+  font-weight: 500;
+}
+
+.fa-search {
+  color: #121212;
+}
+
+.position {
+  font-weight: 700;
+}
+
+.search {
+  opacity: 50%;
+}
+
+.list-item {
+  cursor: pointer;
+  padding: 0.7rem 0;
+}
+
+.list-item span {
+  margin-left: 10px;
+  border-bottom: 1px solid #d8dbe05f;
+}
+
+.list-item:hover {
+  background-color: #07777d;
+}
+
+.show {
+  flex: 1;
+  font-size: 1.3rem;
+}
