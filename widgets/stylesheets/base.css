@@ -61,8 +61,21 @@ h4 {
 .grid-2-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     align-items: center;
+}
+
+.grid-auto-1fr-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.span-2-row {
+    grid-row: 1 / span 2;
+}
+
+.span-2-col {
+    grid-column: 1 / span 2;
 }
 
 .container {

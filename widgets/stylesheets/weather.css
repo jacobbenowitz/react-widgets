@@ -18,11 +18,18 @@
 
 .weather-container {
   padding-top: 2rem;
+  height: 100%;
+  white-space: nowrap;
 }
 
 .big-temp {
   font-size: 4rem;
   font-weight: 400;
+}
+
+.description, .location {
+  align-items: center;
+  place-content: center;
 }
 
 .sm-title {
@@ -34,4 +41,23 @@
 
 .labels {
   opacity: 0.8;
+}
+
+.arrow {
+  padding: 0.2rem;
+  width: 60px;
+  transform: all 300ms ease-in;
+}
+
+.wind-wrapper {
+  padding-top: 1rem;
+  height: 92px;
+}
+
+.title-col {
+  height: 15px;
+}
+
+.weather-icon {
+  width: 50px;
 }

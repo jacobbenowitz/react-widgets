@@ -1,4 +1,7 @@
 import React from "react";
+import { ArrowUp } from '../images/SVG/arrow-up-web.js';
+import { ArrowUpBlue } from "../images/SVG/arrow-up-blue.js";
+import { getDirection } from "./util/direction.js";
 
 const API_KEY = "3f39afb556eab7158c93d32828c6ecc4";
 
@@ -65,7 +68,7 @@ export default class Weather extends React.Component {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`)
       .then(response => response.json())
       .then(data => this.handleData(data))
-      // .then(data => console.log(data))
+    // .then(data => console.log(data))
   }
 
   handleData(data) {
@@ -92,39 +95,17 @@ export default class Weather extends React.Component {
     let weatherData;
     if (status === DONE) {
       weatherData = (
-        <span className="temps">
-          <span className="main-temp">
-            {feelsLike}
-          </span><span className="symbol"> &#8457;</span>
-        </span>
-      )
-    } else if (status === BUSY) {
-      weatherData = (
-        <span className="temps">
-          Communicating with nearby satilites, one moment please 🛰
-        </span>
-      )
-    } else if (status === IDLE) {
-      weatherData = (
-        <span className="temps">
-          Please enable weather services to get your local weather report 🙏
-        </span>
-      )
-    }
-    console.log("weather:", weather)
-    console.log("wind:", wind)
-    return (
-      <div className="weather span-6-center">
-        <h1>Weather</h1>
-        <div className="container grid-2-col col-gap-4">
+        <>
           <div className="top-info flex space-between">
             <div className="description flex left gap-0-6">
-              <div className="icon">{weather.icon}</div>
+              <div className="icon">
+                <img className="weather-icon" src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} />
+              </div>
               <span>{weather.description}</span>
             </div>
             <div className="location flex right gap-0-6">
               <div className="icon">
-                <span>pin</span>
+                <i className="fa-solid fa-map-pin fa-lg" />
               </div>
               <span>
                 {name}
@@ -132,14 +113,14 @@ export default class Weather extends React.Component {
             </div>
           </div>
 
-          <div className="weather-container grid-2-col col-gap-2">
-            <div className="flex-col left grid-col-1 grid-row-1">
+          <div className="weather-container grid-auto-1fr-col col-gap-2">
+            <div className="title-col flex-col left grid-col-1 grid-row-1">
               <span className="sm-title">
                 feels like
               </span>
             </div>
             <div className="flex-col left grid-col-1 grid-row-2 end">
-              <span className="big-temp">{feelsLike}</span>
+              <span className="big-temp">{feelsLike}&#176;</span>
             </div>
             <div className="flex-col left grid-col-2 grid-row-1">
               <span className="sm-title">
@@ -147,45 +128,70 @@ export default class Weather extends React.Component {
               </span>
             </div>
             <div className="flex-row grid-col-2 grid-row-2 gap-1">
-                <div className="flex-col labels">
-                  <span>actual</span>
-                  <span>max</span>
-                  <span>min</span>
-                </div>
-                <div className="flex-col">
-                  <span>{actualTemp}</span>
-                  <span>{maxTemp}</span>
-                  <span>{minTemp}</span>
-                </div>
+              <div className="flex-col labels">
+                <span>actual</span>
+                <span>max</span>
+                <span>min</span>
+              </div>
+              <div className="flex-col">
+                <span>{actualTemp}&#176;</span>
+                <span>{maxTemp}&#176;</span>
+                <span>{minTemp}&#176;</span>
+              </div>
             </div>
           </div>
 
-          <div className="weather-container grid-2-col col-gap-2">
-            <div className="flex-col left grid-col-1 grid-row-1">
+          <div className="weather-container grid-auto-1fr-col col-gap-2 end">
+            <div className="title-col flex-col left grid-col-1 grid-row-1">
               <span className="sm-title">
                 wind
               </span>
             </div>
-            <div className="flex-col left grid-col-1 grid-row-2 end">
-              <span>{wind.deg} deg</span>
-              <span>{wind.speed} mph</span>
+            <div className="wind-wrapper flex-row grid-col-1 grid-row-2 left gap-1">
+              <div className="arrow" style={{ transform: `rotate(${wind.deg}deg)` }}>
+                {ArrowUpBlue}
+              </div>
             </div>
             <div className="flex-col left grid-col-2 grid-row-1">
               <span className="sm-title">
                 today
               </span>
             </div>
-            <div className="flex-row grid-col-2 grid-row-2">
-                <div className="flex-col labels">
-                  <span>gust</span>
-                  <span>direction</span>
-                </div>
-                <div className="flex-col">
-                  <span>{wind.gust} mph.</span>
-                  <span>{wind.deg}</span>
-                </div>
+            <div className="flex-row grid-col-2 grid-row-2 gap-1">
+              <div className="flex-col labels">
+                <span>direction</span>
+                <span>speed</span>
+                <span>gust</span>
+                <span>direction</span>
+              </div>
+              <div className="flex-col">
+                <span>{getDirection(wind.deg)}</span>
+                <span>{Math.round(wind.speed)} mph</span>
+                <span>{Math.round(wind.gust)} mph.</span>
+                <span>{wind.deg}</span>
+              </div>
             </div>
           </div>
+        </>
+      )
+    } else if (status === BUSY) {
+      weatherData = (
+        <span className="span-2-col span-2-row">
+          Communicating with nearby satilites, one moment please 🛰
+        </span>
+      )
+    } else if (status === IDLE) {
+      weatherData = (
+        <span className="span-2-col span-2-row">
+          Please enable weather services to get your local weather report 🙏
+        </span>
+      )
+    }
+    return (
+      <div className="weather span-6-center">
+        <h1>Weather</h1>
+        <div className="container grid-2-col col-gap-4">
+          {weatherData}
         </div>
       </div>
     )
