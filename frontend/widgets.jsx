@@ -36,16 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const tabs = [
             {
-                title: "Weather", content: <Weather type='tab' />
+                title: "Tab 1", content: "Tab 1"
             },
             {
-                title: "Clock", content: <Clock type='tab' />
+                title: "Tab 2", content: "Tab 2"
             },
             {
-                title: "Autocomplete",
-                content: <AutoCompelte
-                    listContent={listContent}
-                    type='tab' />
+                title: "Tab 3",
+                content: "Tab 3"
             },
         ]
 
