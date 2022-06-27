@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
+  "browser": {
+    "fs": false
+  },
   "scripts": {
-    "webpack": "webpack --watch --mode=development"
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
