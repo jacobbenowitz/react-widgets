@@ -4,9 +4,13 @@
     font-weight: 500;
 }
 
-li.active {
+li.active,
+.tab-header li.active:hover {
     font-weight: 900;
-    background-color: #431f96;
+    background-color: #07777d;
+    box-shadow: 0 0 14px #07777d89;
+    z-index: 20;
+    box-sizing: border-box;
 }
 
 .tabs-main {
@@ -33,7 +37,7 @@ li.active {
 }
 
 .tab-header li:hover {
-    background-color: rgba(41, 18, 94, 0.813);
+    background-color: #0450549e;;
     cursor: pointer;
 }
 
@@ -43,7 +47,4 @@ li.active {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.tab-content {
 }

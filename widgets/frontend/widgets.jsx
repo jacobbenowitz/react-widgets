@@ -48,12 +48,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const App = () => (
-        <div className="app grid-12-col">
-            <Tabs tabs={tabs} />
-            <Clock />
-            <Weather />
-            <AutoCompelte listContent={listContent} />
-        </div>
+        <>
+            <div className="app grid-12-col">
+                <Tabs tabs={tabs} />
+                <AutoCompelte listContent={listContent} />
+                <Clock />
+                <Weather />
+                <footer className="span-8">
+                    <div className="spacer ft-divider" data-height="3rem" />
+                    <div className="ft-content flex-col gap-1">
+                        <span>React.js
+                            <strong> Widgets </strong>by Jacob Benowitz
+                        </span>
+                        <ul className="footer-links flex-row gap-4">
+                            <a href="https://github.com/jacobbenowitz" className="link">
+                                <li className="link flex-row gap-0-3">
+                                    <i className="fa-brands fa-github"></i>
+                                        GitHub
+                                </li>
+                            </a>
+                            <a className="link" href="https://www.linkedin.com/in/jacobbenowitz">
+                                <li className="link flex-row gap-0-3">
+                                    <i className="fa-brands fa-linkedin"></i>
+                                    LinkedIn
+                                </li>
+                            </a>
+                            <a className="link" href="https://www.jacobbenowitz.com/">
+                                <li className="link flex-row gap-0-3">
+                                    <i className="fa-solid fa-globe"></i>
+                                    Portfolio
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </>
     );
 
     ReactDOM.render(<App/>, root);

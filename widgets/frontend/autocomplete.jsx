@@ -101,15 +101,15 @@ export default class AutoCompelte extends React.Component {
     if (selected) {
       companyShow = (
         <div className="company-show flex-row space-between gap-0-6">
-          <div className="show flex-col gap-0-6 h-100">
-            <span className="sm-title">Rank</span>
-            <span className="position">#{position}</span>
-          </div>
-          <div className="show flex-col gap-0-6 h-100">
+          <div className="show flex-col gap-0-6 h-100 flex-15">
             <span className="sm-title">Company</span>
             <span>{company.name}</span>
           </div>
-          <div className="show flex-col gap-0-6 h-100">
+          <div className="show flex-col gap-0-6 h-100 flex-1">
+            <span className="sm-title">Rank</span>
+            <span className="position">#{position}</span>
+          </div>
+          <div className="show flex-col gap-0-6 h-100 flex-1">
             <span className="sm-title">Revenue</span>
             <span>{company.revenue}</span>
           </div>

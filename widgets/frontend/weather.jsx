@@ -76,7 +76,7 @@ export default class Weather extends React.Component {
               <div className="icon">
                 <img className="weather-icon" src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} />
               </div>
-              <span>{weather.description}</span>
+              <span className="description">{weather.description}</span>
             </div>
             <div className="location flex right gap-0-6">
               <div className="icon">
