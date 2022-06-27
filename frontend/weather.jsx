@@ -1,8 +1,8 @@
 import React from "react";
-import { ArrowUp } from '../images/SVG/arrow-up-web.js';
 import { ArrowUpBlue } from "../images/SVG/arrow-up-blue.js";
 import { getDirection } from "./util/direction.js";
 
+// Burner account free tear only...
 const API_KEY = "3f39afb556eab7158c93d32828c6ecc4";
 
 const IDLE = "IDLE";
@@ -38,11 +38,9 @@ export default class Weather extends React.Component {
   locationFound(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    // TODO: HIDE API KEY
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`)
       .then(response => response.json())
       .then(data => this.handleData(data))
-    // .then(data => console.log(data))
   }
 
   handleData(data) {
