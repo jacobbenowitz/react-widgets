@@ -90,3 +90,18 @@ document.addEventListener("DOMContentLoaded", () => {
     ReactDOM.render(<App />, root);
 
 });
+
+// const tabs = [
+//     {
+//         title: "Weather", content: <Weather type='tab' />
+//     },
+//     {
+//         title: "Clock", content: <Clock type='tab' />
+//     },
+//     {
+//         title: "Autocomplete",
+//         content: <AutoCompelte
+//             listContent={listContent}
+//             type='tab' />
+//     },
+// ]
