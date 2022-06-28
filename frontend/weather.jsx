@@ -118,9 +118,7 @@ export default class Weather extends React.Component {
 
           <div className="wind weather-container grid-2-col col-gap-2 grid-row-3 w-100">
             <div className="title-col flex-col left grid-col-1 grid-row-1">
-              <div className="wind sm-title">
-                <span>wind</span>
-              </div>
+              <span className="sm-title">wind</span>
             </div>
             <div className="wind-wrapper flex-row grid-col-1 grid-row-2 left gap-1">
               <div className="arrow" style={{ transform: `rotate(${wind.deg}deg)` }}>
