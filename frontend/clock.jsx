@@ -29,9 +29,8 @@ export default class Clock extends React.Component{
     const { type } = this.props;
 
     let hours = date.toLocaleString('en-US', { hour: 'numeric', hour12: true })
-    debugger
     
-    let hoursNums = hours.length > 4 ? hours.slice(0, 2) : hours.slice(0, 1)
+    let hoursNums = hours.length > 4 ? hours.slice(0, 2) : hours.slice(0, 1);
     hoursNums = (hoursNums < 10) ? `${hoursNums}` : hoursNums;
 
     let amPm = hours.slice(hours.length - 2)
