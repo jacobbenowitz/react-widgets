@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import { ClockDetails } from "./project_details";
 
 export default class Clock extends React.Component{
   constructor(props){
@@ -56,7 +57,7 @@ export default class Clock extends React.Component{
     } else {
       containerStyle = "span-6-center"
       cardStyle = "time container grid-auto-1ft-row gap-2"
-      tabHeader = <h1 className="title">Clock</h1>
+      tabHeader = <ClockDetails />
     }
 
     return (

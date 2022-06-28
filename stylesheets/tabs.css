@@ -48,3 +48,10 @@ li.active,
     justify-content: center;
     align-items: center;
 }
+
+.demo-tab {
+    margin: 4rem 0;
+    font-size: 2rem;
+    font-family: 'Fira Code', monospace;
+    font-weight: 100;
+}

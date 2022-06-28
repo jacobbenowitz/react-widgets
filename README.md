@@ -35,19 +35,19 @@ The `Clock` component displays the current date and time, updating every second.
 <br>
 
 ### **`Weather`**
-The `Weather` component provides local weather data in an organized and digestable fashion. Weather data includes:
+The `Weather` component provides local weather data in an organized and digestible fashion. Weather data includes:
 - **Description**
   -  Short description of the current weather conditions along with a relevant icon
   - Current location being used for weather data
-- **Temeratures** (all in fahrenheit)
+- **Temperatures** (all in fahrenheit)
   - `feelsLike` - what it currently 'feels like'
   - `actual` - what the actual current temperature is
-  - `max` and `min` - highest and lowest temperatues for the current date
+  - `max` and `min` - highest and lowest temperatures for the current date
 - **Wind**
   - Directional arrow icon that is rotated based on the current direction of wind
   - Two letter abbreviations for the compass direction of the current wind
   - Speed of current wind (imperial miles/hr)
-  - Gusts (imperial miles/hr), only if there are high wind gusts in the forcast 
+  - Gusts (imperial miles/hr), only if there are high wind gusts in the forecast 
 
 <img src="images/weather_widget.png" width="600px" />
 
@@ -71,15 +71,15 @@ The `AutoComplete` component filters a list of names based on the user's input. 
 <br>
 
 ### **`Tabs`**
-The `Tabs` widget is an interactive container that dynaically displays content based on the label selected by the user.
+The `Tabs` widget is an interactive container that dynamically displays content based on the label selected by the user.
 - **Dynamic Props**
-  - Tabs are accepted as props in the following format:
+  - Tabs are passed as props formatted as an array objects, each with a `title` (`string`) and `content` (`React Components` or `HTML Elements`):
   ```javascript
   [{title: "Weather", content: <Weather type='tab' />}, ...]
   ```
 - **Active Tabs**
   - Selected tab index stored in component's state
-  - Currently selected tab is styled with a blue background, box-shadow, and bold text
+  - The actively selected tab is styled with a blue background, box-shadow, and bold text
 
 <img src="images/tabs_widget.png" width="600px">
 

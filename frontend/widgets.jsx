@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import AutoCompelte from "./autocomplete";
 import Clock from "./clock";
+import {ProjectDetails} from "./project_details";
 import Tabs from "./tabs";
 import Weather from "./weather";
 
@@ -36,46 +37,71 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         const tabs = [
-            {
-                title: "Weather", content: <Weather type='tab' />
-            },
-            {
-                title: "Clock", content: <Clock type='tab' />
-            },
-            {
-                title: "Autocomplete",
-                content: <AutoCompelte
-                    listContent={listContent}
-                    type='tab' />
+            { title: "Weather", content: <Weather type='tab' /> },
+            { title: "Clock", content: <Clock type='tab' /> },
+            { title: "Autocomplete", content:
+                <AutoCompelte
+                listContent={listContent}
+                type='tab' />
             },
         ]
-        // const tabs = [
-        //     {
-        //         title: "Tab 1", content: "Tab 1"
-        //     },
-        //     {
-        //         title: "Tab 2", content: "Tab 2"
-        //     },
-        //     {
-        //         title: "Tab 3",
-        //         content: "Tab 3"
-        //     },
-        // ]
+        const demoTabs = [
+            { title: "Tab #1", content: <div className="demo-tab flex-col center"><span>Tab #1</span></div> },
+            { title: "Tab #2", content: <div className="demo-tab flex-col center"><span>Tab #2</span></div> },
+            { title: "Tab #3", content: <div className="demo-tab flex-col center"><span>Tab #3</span></div> },
+        ]
 
         return (
             <>
+                <a href="#top" className="top-link">
+                    <div className="icon-wrapper">
+                        <i className="fa-solid fa-arrow-up" />
+                    </div>
+                </a>
                 <div className="app grid-12-col">
-                    <Tabs tabs={tabs} />
+                    <section id="top" />
+                    <div className="span-6-center flex-col">
+                        <div className="flex-col left w-100">
+                            <h1>React Widgets</h1>
+                            <ProjectDetails />
+                        </div>
+                    </div>
+                    
+                    <section id="widget-all" className="span-6-center-sm" />
+                    <Tabs type="widgets" tabs={tabs} />
+                    <div className="span-6-center-sm spacer"
+                        data-height="3rem" 
+                    />
+
+                    <section id="widget-auto" className="span-6-center-sm" />
                     <AutoCompelte listContent={listContent} />
+                    <div className="span-6-center-sm spacer"
+                        data-height="3rem" 
+                    />
+
+                    <section id="widget-clock" className="span-6-center-sm" />
                     <Clock />
+                    <div className="span-6-center-sm spacer"
+                        data-height="3rem" 
+                    />
+
+                    <section id="widget-weather" className="span-6-center-sm" />
                     <Weather />
+                    <div className="span-6-center-sm spacer"
+                        data-height="3rem" 
+                    />
+                    <section id="widget-tabs" className="span-6-center-sm" />
+                    <Tabs tabs={demoTabs} />
+                    <div className="span-6-center-sm spacer"
+                        data-height="3rem" 
+                    />
                     <footer className="span-8">
                         <div className="spacer ft-divider" data-height="3rem" />
-                        <div className="ft-content flex-col gap-1">
+                        <div className="ft-content flex-row gap-1 space-between">
                             <span>React.js
                                 <strong> Widgets </strong>by Jacob Benowitz
                             </span>
-                            <ul className="footer-links flex-row gap-4">
+                            <ul className="footer-links flex-row gap-2">
                                 <a href="https://github.com/jacobbenowitz" className="link">
                                     <li className="link flex-row gap-0-3">
                                         <i className="fa-brands fa-github"></i>

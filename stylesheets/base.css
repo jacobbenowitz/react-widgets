@@ -2,6 +2,17 @@
     background-color: #292929;
     min-height: 100vh;
     height: 100%;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+code {
+    padding: 3px 5px;
+    line-height: 175%;
+    background-color: #121212;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;
 }
 
 article {
@@ -10,7 +21,8 @@ article {
 
 footer {
     background-color: #292929;
-    padding: 3rem 0;
+    margin-top: 6rem;
+    padding: 2rem 0;
 }
 
 h1, h2, h3, h4, h5, p, li, a, article, span {
@@ -39,7 +51,7 @@ a:active,
 }
 
 h1 {
-    color: #e5e7ea6b;
+    color: #e5e7ea;
     font-size: 2.3rem;
     font-weight: 700;
     padding-bottom: 0.5rem;
@@ -51,6 +63,7 @@ p, section {
 
 h2 {
     font-size: 2rem;
+    font-weight: 700;
 }
 
 h3 {
@@ -79,8 +92,29 @@ strong {
     align-items: center;
 }
 
+.top-link {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    box-sizing: border-box;
+    background-color: #121212bf;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    transition: all 200ms ease-out;
+}
+
+.top-link:hover {
+    bottom: 28px;
+}
+
 .title {
-    margin-left: 1rem;
+    color: #e5e7ea6b;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .label {
@@ -109,6 +143,10 @@ input[type='text'] {
     margin-top: 4rem;
     margin-bottom: 1rem;
     /* width: minmax(fit-content, 400px); */
+}
+.span-6-center-sm {
+    grid-column: 4 / span 6;
+    align-items: center;
 }
 
 .tab-card {
@@ -175,10 +213,6 @@ input[type='text'] {
 .tab-container {
     /* padding: 2rem; */
     box-sizing: border-box;
-}
-
-.app {
-    padding-bottom: 5rem;
 }
 
 .flex {
@@ -277,8 +311,18 @@ input[type='text'] {
 .spacer[data-height="10"] {
     height: 10px;
 }
+.spacer[data-height="15"] {
+    height: 15px;
+}
+.spacer[data-height="20"] {
+    height: 20px;
+}
 .spacer[data-height="1rem"] {
     height: 1rem;
+    width: 100%;
+}
+.spacer[data-height="2rem"] {
+    height: 2rem;
     width: 100%;
 }
 .spacer[data-height="3rem"] {
@@ -306,4 +350,41 @@ input[type='text'] {
 
 .link {
     position: relative;
+}
+
+.widget-details {
+    padding: 0.5rem;
+    white-space: break-spaces;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.widget-details ul {
+    margin-left: 1rem;
+    margin-bottom: 0.65rem;
+}
+.widget-details li {
+    list-style: circle;
+    margin-top: 4px;
+}
+
+.widget-link {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 2px 5px;
+    margin: 3px 0;
+    width: fit-content;
+    background-color: #121212;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.links-wrapper {
+    height: 100px;
+    margin-left: 0.5rem;
+    margin-top: 0.7rem;
 }

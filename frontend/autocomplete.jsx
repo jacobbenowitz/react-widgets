@@ -1,4 +1,5 @@
 import React from "react";
+import { AutoDetails, TabsDetails } from "./project_details";
 
 export default class AutoCompelte extends React.Component {
   constructor(props) {
@@ -77,7 +78,7 @@ export default class AutoCompelte extends React.Component {
     } else {
       containerStyle = "autocomplete span-6-center w-100";
       cardStyle = "autocomplete-content container grid-3-row";
-      tabHeader = <h1 className="title">Autocomplete</h1>
+      tabHeader = <AutoDetails />
     }
 
     results = (

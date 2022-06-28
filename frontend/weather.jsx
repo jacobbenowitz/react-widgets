@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowUpBlue } from "../images/SVG/arrow-up-blue.js";
+import { WeatherDetails } from "./project_details.jsx";
 import { getDirection } from "./util/direction.js";
 
 // Burner account free tear only...
@@ -172,7 +173,7 @@ export default class Weather extends React.Component {
     } else {
       containerStyle = "weather span-6-center w-100";
       cardStyle = "weather-content container grid-3-row";
-      tabHeader = <h1 className="title">Weather</h1>
+      tabHeader = <WeatherDetails />
     }
 
     return (

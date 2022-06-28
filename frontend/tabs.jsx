@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Header from "./header";
+import { TabsDetails } from "./project_details";
 
 export default class Tabs extends React.Component {
   constructor(props) {
@@ -21,12 +22,21 @@ export default class Tabs extends React.Component {
   }
 
   render() {
+    const { type } = this.props;
     const currentTab =
       this.props.tabs[this.state.selectedTab];
+    let cardHeader;
+
+    if (type === 'widgets') {
+      cardHeader = <h1 className="title">All Widgets</h1>
+    } else {
+      cardHeader = <TabsDetails />
+    }
+    
     return (
       <div className="tabs span-6-center">
         <div className="tabs-container">
-          <h1 className="title">Tabs</h1>
+          {cardHeader}
           <div className="tabs-main">
             <Header
               selectedTab={this.state.selectedTab}
