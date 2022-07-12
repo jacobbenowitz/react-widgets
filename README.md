@@ -1,6 +1,6 @@
 # React Widgets
 
-## **[https://jacobbenowitz.github.io/react-widgets/](React Widgets Live >)**
+## **[React Widgets Live >](https://jacobbenowitz.github.io/react-widgets/)**
 
 **Table of Contents**
 - [React Widgets](#react-widgets)
